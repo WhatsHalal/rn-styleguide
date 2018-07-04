@@ -11,27 +11,34 @@ Wether you use plain `javascript` or `typescript` following guide is equally app
 **Don't** pass **null / undefined** into function parameter
 
 ```js
-let params;
-this.callParams(params)
-
+function one(){
+    let params;
+    callParams(params)
+}
 ...
 
-callParams = (params) => {
+const callParams = (params) => {
     // do something here
 }
 ```
 
 #### Do
 
-**Do** give default value to function parameters
+**Do** give default value to function parameters or check for **null / undefined**
 
 ```js
-let params;
-this.callParams(params)
+function one(){
+    let params;
+    callParams(params)
+    // OR check for value
+    if (params){
+        callParams(params)
+    }
+}
 
 ...
 
-callParams = (params = {}) => {
+const callParams = (params = {}) => { // add default value as well
     // do something here
 }
 ```
