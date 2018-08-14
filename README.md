@@ -4,6 +4,18 @@ Wether you use plain `javascript` or `typescript` following guide is equally app
 
 ## Table of content
 
+### Naming Convention and Structure
+
+Use following naming convention and structure
+
+- Files related to main feature/module should all be within a folder. Name the folder the same as feature. ex: `Auth` folder for any files related with authentication
+- Includes a suffix on file name for API, Redux/MobX, Screen
+- Function for API should follow REST naming, prefix it with REST method. Ex: getOrders, postComment, deleteItem
+- Function on API files should minimise any data transformation, let Redux/Mobx handle it.
+- Function that call API, should have use `fetch` prefix
+- Function that load data from local storage or database should use `load` prefix
+- Prefer to use PureComponent instead of functional stateless component
+
 ### null / undefined
 
 #### Don't
